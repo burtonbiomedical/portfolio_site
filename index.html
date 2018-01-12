@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+    <title>Ross Burton - Portfolio</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,6 +23,9 @@
 
     <!-- Custom styles for this template -->
     <link href="css/freelancer.min.css" rel="stylesheet">
+    <!--Custom JS for searchable table-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
 
   </head>
 
@@ -31,7 +34,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Ross Burton</a>
         <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -39,10 +42,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#edu">My Coding Journey</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
@@ -55,152 +61,339 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container">
-        <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
-        <h1 class="text-uppercase mb-0">Start Bootstrap</h1>
-        <hr class="star-light">
-        <h2 class="font-weight-light mb-0">Web Developer - Graphic Artist - User Experience Designer</h2>
+        <img class="rounded-circle mb-5 d-block mx-auto" src="img/profile_pic.jpg" alt="">
+        <h1 class="mb-5">Ross Burton BSc LIBMS</h1>
+        <hr class="mb-5 star-light">
+        <h2 class="font-weight-light">Biomedical Scientist - Data Scientist - Web Developer</h2>
       </div>
     </header>
 
-    <!-- Portfolio Grid Section -->
-    <section class="portfolio" id="portfolio">
+    <!-- About Section -->
+    <section class="text-white mb-0" id="about">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+        <h2 class="text-center text-uppercase text-secondary">About</h2>
         <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-lg-12 text-center text-secondary">
+            <p class="lead">Hi there! Welcome to my portfolio page. My name is Ross Burton, and I'm a tech enthusiast, eager to apply my skills to the world of healthcare and laboratory medicine.
+            On this page you will find links to all the projects and ideas I have contributed too. I also share my insights and experience with online education and how I taught myself programming, data science, and
+            web development.</p>
+            <p class="lead"><strong>So why data science? and why the web?</strong></p>
+            <p class="lead">Healthcare, as with many industries, is changing. With a growing population, and new challenges of both financial and political origin, it is vital that we leverage technology
+            to help our healthcare systems survive and grow. Having originally trained in laboratory medicine (specificially infectious disease diagnostics) I have experienced first hand the growing pressures on our healthcare systems.
+            We in healthcare sit on a bedrock of data, mostly unused. There is strong ethical debate to be had about how we use this data, but in my opinion we need to act before our services crumble.
+            Predictive analytical methods adopted from the field of data science could not only improve the efficiency of healthcare services, but could provide new insights into how we diagnose disease.
+            Web technologies on the other hand, provide a powerful platform to make applications available to a wide range of services at scale.</p>
+            <p class="lead">This is why I have pursued further education through online services, to adopt the necessary skills to develop tools and processes for the application of data science to laboratory medicine.
+            You can read <strong><a class="text-primary js-scroll-trigger" href="#edu">below</a></strong> about this journey, and navigate the <strong><a class="text-primary js-scroll-trigger" href="#portfolio">portfolio</a></strong>
+            section for examples of its application. I hope you enjoy, and please feel free to <strong><a class="text-primary js-scroll-trigger" href="#contact">contact me</a></strong>
+            have you any further questions. I am always open to colaboration, offers, or conversation. Kind regards, Ross.</p>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a class="btn btn-xl btn-outline-light" href="https://www.linkedin.com/in/burtonbiomedical/">
+            <i class="fa fa-linkedin-square mr-2"></i>
+            LinkedIn
+          </a>
+          <a class="btn btn-xl btn-outline-light" href="https://github.com/burtonbiomedical">
+            <i class="fa fa-github mr-2"></i>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Portfolio Grid Section -->
+    <section class="bg-primary portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white mb-0">Portfolio</h2>
+        <hr class="star-light mb-5">
         <div class="row">
           <div class="col-md-6 col-lg-4">
             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <p class="text center">Using urine microscopy to predict culture outcomes; a predictive analysis.</p>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
+              <img class="img-fluid" src="img/portfolio/urine_micro_stock.jpg" alt="">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <p class="text center">Geocoding NTM isolate data</p>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/cake.png" alt="">
+              <img class="img-fluid" src="img/portfolio/bristol_map.png" alt="">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <p class="text center">Personal Projects</p>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/circus.png" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/game.png" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/safe.png" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
+              <img class="img-fluid" src="img/portfolio/code.png" alt="">
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="bg-primary text-white mb-0" id="about">
+    <!-- Coding Journey Section -->
+    <section class="text-white mb-0" id="edu">
       <div class="container">
-        <h2 class="text-center text-uppercase text-white">About</h2>
-        <hr class="star-light mb-5">
+        <h2 class="text-center text-uppercase text-secondary">My Coding Journey</h2>
+        <hr class="star-dark mb-5">
         <div class="row">
-          <div class="col-lg-4 ml-auto">
-            <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-          </div>
-          <div class="col-lg-4 mr-auto">
-            <p class="lead">Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+          <div class="col-lg-12 text-center text-secondary">
+            <p class="lead">I've always been a techie. Since the day I got my first computer, I've been 'hacking' away at things. My earliest exposure
+            was probably modding my favourite games. My first experience with what you could call true coding was during my Computer Science A-Level. My first
+            programming language was VB6, and this was quickly followed by VB.net and SQL. I was hooked. It wasn't long before I was trying to
+            build a desktop app for everything. Unfortunately though, when it came to choosing a university degree, I had some knock backs in terms of my confidence.
+            Despite getting good A-level results (looking back I could have easily done a comp sci degree) I was advised against a career in computer science, being
+            told things like "all the programming jobs are being shipped abroad" and "you didn't do A-level Maths, so you don't have a chance". So, I went with my other passion,
+            medical science.</p>
+            <p class="lead">Thoughout my university degree, I kept up my programming skills, but I never took the time to expand on them, opting to instead
+            focus on my skills and knowledge in Biomedical Science. When I graduated I was fortunate enough to immediately get a position at the Oxford University Hospitals Microbiology department.
+            It was here that the power of programming would return to me. Within a few months of being in my new grauduate job, I was applying my techie interests. I became part of
+            the laboratories IT management team, and since no-one else knew how to code, I started writing VBA scripts for management.
+            This soon lead to writing SQL to extract data from the laboratory IT system, and then building bispoke applications in VB.NET to handle larger repetitive tasks that required user input.
+            I was in my element...but also, severely underskilled. It became obvious that this was what I wanted to do. I want to build data driven solutions for laboratory medicine,
+            but in a modern NHS pathology laboratory, there just isn't the time or resources to do this.
+            </p>
+            <p class="lead"><strong>Everything you need is a Google search away</strong></p>
+            <p class="lead">It was now obvious to me that I needed to take actions into my own hands, but like many newly graduated
+            government employees, I couldn't afford to go back into full time education. So, I turned to our great friend, the internet.
+            We live in the golden age of open education. If you want to learn something, there is a book, YouTube video, blog, or platform
+            for you to learn from. My first hurdle was information overload. Where do you begin when there are so many programming languages, libraries, subjects and
+            sub-categories? Luckily, I have some great friends who advised me, and after much swaying back and forth between ideas,
+            I decided I was interested in two subject areas: Data Science, and Web Development. My focus is therefore: Python programming and machine learning, and HTML, CSS, and Javascript</p>
+            <p class="lead">What I want to try and attempt to do now, is create a comprehensive guide of what resources I have used, and what
+            resources I intend to use in the future. I will try and classify each resource with the difficulty level. It is my hope to keep expanding
+            this list of resources in the future.</p>
           </div>
         </div>
-        <div class="text-center mt-4">
-          <a class="btn btn-xl btn-outline-light" href="#">
-            <i class="fa fa-download mr-2"></i>
-            Download Now!
-          </a>
-        </div>
+        <h3 class="text-secondary mt-5">Resources I've used/plan to use</h3>
+        <input class="form-control" id="searchResources" type="text" placeholder="Search..">
+        <br>
+        <table class="table table-bordered text-secondary">
+          <thead>
+            <tr>
+              <th>Resource</th>
+              <th>Description</th>
+              <th>Difficulty</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody id="resourceTable">
+            <tr>
+              <td><a href="https://www.freecodecamp.org" class="text-secondary">FreeCodeCamp</a></td>
+              <td>Comprehensive web development course, covering HTML, CSS, and Javascript. Refered to me by a dear friend
+              (you know who you are) and now a personal favourite of mine</td>
+              <td>Beginner to Intermediate</td>
+              <td>Free</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.dataquest.io" class="text-secondary">DataQuest</a></td>
+              <td>A real beginners guide to the Python programming langauge in the contexts of data analysis and machine learning.
+              Learning is broken down into three learning paths depending on your personal goals.
+              I really learnt so much from this platform. Although I had used a couple of resources for Python prior to this course,
+              I feel like I didn't really 'know' Python until I took this course.</td>
+              <td>Beginner to Intermediate</td>
+              <td>$29/month to $50/month</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.amazon.co.uk/Data-Science-Scratch-Principles-Python/dp/149190142X" class="text-secondary">Data Science From Scratch</a></td>
+              <td>Don't let the title decieve you, this book is not for beginners, and quite harshly dives into some quite tough mathematical concepts
+                without much 'handholding'. So if you already have some experience with linear algedbra, probability theory, and the python programming
+                language, then I would recommend this book. Otherwise, perhaps cover some of those subjects first before attempting this book. Contains
+                lots and lots of example code in Python.</td>
+              <td>Intermediate</td>
+              <td>~£20</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.amazon.co.uk/gp/offer-listing/1617292230/ref=sr_1_1_olp?s=books&ie=UTF8&qid=1515357799&sr=1-1&keywords=grokking+algorithms" class="text-secondary">Grokking Algorithms</a></td>
+              <td>This book is amazing! If you want to gain a good understanding of common programming algorithms and data structures, this is the
+              book for you. The logic of each algorithm is beautifully illustrated and comes with example code in Python.</td>
+              <td>Beginner</td>
+              <td>~£20</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.amazon.co.uk/Sprint-Solve-Problems-Test-Ideas/dp/150112174X" class="text-secondary">Sprint by Jake Knapp</a></td>
+              <td>Strategy and design using the sprint methodology</td>
+              <td>Beginner</td>
+              <td>~£10</td>
+            </tr>
+            <tr>
+              <td><a href="https://eu.udacity.com/course/deep-learning-nanodegree-foundation--nd101" class="text-secondary">Udacity Deep Learning Nanodegree</a></td>
+              <td>Warning: do not go into this course unless you're a confident Python programmer. I simply didn't know enough before going into this
+              program, but I must say I learnt so much whilst I was there (sometimes its good to jump in the deep end). This course aims to give an introduction
+              to the field of Deep Learning, and guides you through five projects where you build Neural Networks in TensorFlow to solve practical problems like
+              sentiment analysis and image recognition. I plan on revisiting the course material in the near future.</td>
+              <td>Intermediate to Advanced</td>
+              <td>~£300</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.futurelearn.com" class="text-secondary">FutureLearn</a></td>
+              <td>My first exposure to Python programming was from a course on FutureLearn. That was some time ago now, so I am unaware of what
+                coding courses they provide now, but it certainly worth a browse. Definitely serves as just a starting point, and further reading is needed
+               as topics are not often discussed in-depth</td>
+              <td>Beginner</td>
+              <td>Free</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.tutorialspoint.com/bootstrap/" class="text-secondary">TutorialSprint - Bootstrap</a></td>
+              <td>Maybe a little outdated in places, but probably the easiest guide to Bootstrap to follow in my experiences, however
+              it should be noted that twitters documentation is also very good</td>
+              <td>Beginner</td>
+              <td>Free</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.youtube.com/playlist?list=PLGLfVvz_LVvSMqZiTTsAC7C8Ypp81Jt6D" class="text-secondary">Derek Banas - Django</a></td>
+              <td>Video tutorials for a crash course in Django. Rather fast pace, but if you already have quite a bit of Python experience, this may
+              suite you</td>
+              <td>Intermediate</td>
+              <td>Free</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.youtube.com/watch?v=fJW65Wo7IHI&list=PLGLfVvz_LVvS5P7khyR4xDp7T9lCk9PgE" class="text-secondary">Derek Banas - OOP</a></td>
+              <td>Do people keep talking about 'Object Orientated Programming' and you're scratching your head and asking "what is an object?", let Derek explain</td>
+              <td>Beginner</td>
+              <td>Free</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.youtube.com/watch?v=_cLvpJY2deo&list=PLBA965A22D89CF13B" class="text-secondary">Derek Banas - Javascript</a></td>
+              <td>This might suite some people who want a crash course in Javascript, but I found alot of things didn't stick after watching this video series.
+              I really think the best way to learn a langauge is by just using it. So be sure to practice all the concepts he discusses.</td>
+              <td>Beginner</td>
+              <td>Free</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.youtube.com/watch?v=I-rTKuEhrCM&list=PL07454EA7FF8D28AB" class="text-secondary">Derek Banas - CSS</a></td>
+              <td>Very comprehensive start to finish guide to CSS, however also very dry....but then again it is CSS</td>
+              <td>Beginner</td>
+              <td>Free</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw/playlists" class="text-secondary">3Blue1Brown</a></td>
+              <td>Grant Sanderson is truely a hero. I found the linear algebra and calculus playlists perfect for my learning needs.
+              Every concept covered comes with visual descriptions, which really helps absorb some of the tricky logic</td>
+              <td>Beginner to Intermediate</td>
+              <td>Free</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.youtube.com/channel/UCWN3xxRkmTPmbKwht9FuE5A" class="text-secondary">Siraj Raval</a></td>
+              <td>Do you want someone to explain deep learning and AI to you through music videos and memes? Look no further. Siraj really covers everything
+              For beginners check out "Intro to Data Analysis", "Intro to Tensorflow", and "The Math Of Intelligence" playlists. But there is really something
+            for everyone here</td>
+              <td>Beginner to Advanced</td>
+              <td>Free</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.obeythetestinggoat.com/" class="text-secondary">Test-Driven Development with Python</a></td>
+              <td>Test Driven Development is taught alongside the technologies of Django, Selenium and Javascript. It assumes no prior knowledge of
+              TTD or these technologies, but you're expected to have prior experience with the Python programming langauge, and a basic understanding of the web.
+              After finishing this book you should be able to make pretty Django web apps.</td>
+              <td>Intermediate</td>
+              <td>Free (~$50 if you're feeling generous and choose to buy the book)</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.amazon.co.uk/Interactive-Data-Visualization-Scott-Murray/dp/1491921285/ref=dp_ob_title_bk" class="text-secondary">Interactive Data Visualization for the Web</a></td>
+              <td>I learnt the hard way that your fancy data analysis doesn't mean anything if you cannot explain your results clearly and in a concise
+                format. This is why the D3.js library is incredibly useful. This book takes you from scratch, teaching the basics of SVG and javascript,
+              all the way up to complex data bindings in D3 to give powerful visualisations.</td>
+              <td>Biginner</td>
+              <td>~£25</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.learnenough.com/command-line-tutorial" class="text-secondary">Lean Enough Command Line To Be Dangerous</a></td>
+              <td>When you're a linux newb like me, Michael Hartl is a god send. He will get you pipping, grepping and sudo'ing in no time.</td>
+              <td>Biginner</td>
+              <td>Free</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.learnenough.com/git-tutorial" class="text-secondary">Lean Enough Git To Be Dangerous</a></td>
+              <td>Probably one of the most important courses I have taken. I don't know how I lived without version control. This course covers
+              all you need to know about Git and GitHub.</td>
+              <td>Biginner</td>
+              <td>Free</td>
+            </tr>
+            <tr>
+              <td><a href="https://betterexplained.com/" class="text-secondary">Better Explained</a></td>
+              <td>MATHS!!.....when you get stuck (and you will) you're likely to find a simple and friendly explanation here</td>
+              <td>Biginner to Intermediate</td>
+              <td>Free</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.coursera.org/learn/machine-learning" class="text-secondary">Machine Learning</a></td>
+              <td>This is the original MOOC for machine learning, and contains a heap of content. It is not for the faint hearted though,
+              and I would recommend scrubbing up on your linear algebra and calculus prior to starting.</td>
+              <td>Intermediate</td>
+              <td>Free ($39/month for certificate)</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.coursera.org/specializations/scala" class="text-secondary">Scala</a></td>
+              <td>This has been on my to-do list since my encounters with Apache Spark and the PySpark library (built on Scala).
+              Funcational programming is cool.</td>
+              <td>Intermediate to Advanced</td>
+              <td>Free ($39/month for certificate)</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.braveclojure.com/" class="text-secondary">Clojure</a></td>
+              <td>I've been told that there are two types of programmers, those that know Clojure, and those that do not.
+              At some point, it is my intention to learn (but currently not a priority). This book looks incredibly fun nontheless</td>
+              <td>Intermediate to Advanced</td>
+              <td>Free</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section class="bg-primary" id="contact">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Contact Me</h2>
-        <hr class="star-dark mb-5">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
+        <h2 class="text-center text-uppercase text-white mb-0">Contact Me</h2>
+        <hr class="star-light mb-5">
+          <div class="jumbotron">
             <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
             <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+            <form novalidate="novalidate" action="https://formspree.io/burtonrossj@gmail.com" method="POST">
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Name</label>
-                  <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name.">
+                  <input class="form-control" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." name="name">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Email Address</label>
-                  <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address.">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Phone Number</label>
-                  <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number.">
+                  <input class="form-control" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." name="_replyto">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Message</label>
-                  <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+                  <textarea class="form-control" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message." name="message"></textarea>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <br>
               <div id="success"></div>
               <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+                <input type="text" name="_gotcha" style="display:none" />
+                <button type="submit" class="btn btn-primary btn-xl" value="Send">Send</button>
               </div>
             </form>
           </div>
         </div>
-      </div>
     </section>
 
     <!-- Footer -->
@@ -209,42 +402,32 @@
         <div class="row">
           <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">Location</h4>
-            <p class="lead mb-0">2215 John Daniel Drive
-              <br>Clark, MO 65243</p>
+            <p class="lead mb-0">Bristol
+              <br>United Kingdom</p>
           </div>
           <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">Around the Web</h4>
             <ul class="list-inline mb-0">
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fa fa-fw fa-facebook"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fa fa-fw fa-google-plus"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fa fa-fw fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/burtonbiomedical/">
                   <i class="fa fa-fw fa-linkedin"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fa fa-fw fa-dribbble"></i>
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/burtonbiomedical">
+                  <i class="fa fa-fw fa-github"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://medium.com/@burton_biomedical">
+                  <i class="fa fa-fw fa-medium"></i>
                 </a>
               </li>
             </ul>
           </div>
           <div class="col-md-4">
-            <h4 class="text-uppercase mb-4">About Freelancer</h4>
-            <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
+            <h4 class="text-uppercase mb-4">About this site</h4>
+            <p class="lead mb-0">This site uses the Freelane bootstrap template. Freelance is a free to use, open source Bootstrap theme created by
               <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
           </div>
         </div>
@@ -253,7 +436,7 @@
 
     <div class="copyright py-4 text-center text-white">
       <div class="container">
-        <small>Copyright &copy; Your Website 2017</small>
+        <small>Copyright &copy; Ross Burton BSc LIBMS</small>
       </div>
     </div>
 
@@ -274,14 +457,23 @@
         </a>
         <div class="container text-center">
           <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+            <div class="col-lg-12 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Can we use urine microscopy to reduce urine culture workload? A predictive analysis</h2>
               <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/cabin.png" alt="">
-              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <img class="img-thumbnail" src="img/portfolio/logo-sedimax-contrust.jpg" alt="">
+              <img class="img-thumbnail" src="img/portfolio/Severn-Pathology-Banner-1.jpg" alt="">
+              <p class="mb-2">Using 220,000 urine sample records provided by the medical microbiology laboratory at Severn Pathology in Bristol, UK
+              I analysed the outcome of using automated urine microscopy to select samples for culture. The aim was to reduce laboratory workload
+              without the risk of missing clinically significant cultures. Comprehensive analysis was conducted under the careful guide an experienced
+              clinical and technical team to find the optimum microscopy thresholds that would generate the lowest possible false negative rate. I conducted
+              my analysis of the dataset using the Pandas library in Python to provide insight into the outcomes of various thresholds. Expanding on this,
+              application of machine learning was investigated as a means of predicting report outcomes before cultures are performed. Although not adopted,
+              this novel approach gave great insight into the application of machine learning to medical microbiology, and is under consideration for future projects.</p>
+              <p class="mb-5"><i class="fa fa-fw fa-github"></i><a href="https://github.com/burtonbiomedical/uti_data_project_2017">Github repo</a></p>
               <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
+                    <i class="fa fa-close"></i>
+              Close Project</a>
+              </div>
             </div>
           </div>
         </div>
@@ -297,10 +489,20 @@
         <div class="container text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <h2 class="text-secondary text-uppercase mb-0">Geocoding Non-Tuberculosis Mycobacterium (NTM) isolates from bronchiectasis patients</h2>
               <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="">
-              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <p class="mb-2">Patient to patient transmission of NTM strains between bronchiectasis patients is currently unproven but suspected
+              in some cases. To assist with the work of Dr Mustafa Hashim and his colleagues, I used a dataset of over 300 patients containing isolate
+              information and postcode data. After exploring and cleaning the data in Python, I used the google maps API to geocode each unique isolate,
+              and overlayed this data on a map of the local area using the the Bokeh.js library. I provided the medical team with an interactive
+              display of the patient location, and the particular strain of NTM obtained through bacterial culture. The hope is to examine whether
+              NTM strains cluster in particular locations.</p>
+              <div class="jumbotron pt-4 pb-4">
+                <p class="testimonial">“Ross Burton is a Biomedical Scientist in bacteriology who has great knowledge of Python programming. He wrote a script that can pull
+                 specimens results out of Winpath ( laboratory information  management system ) and plot them on google maps. His interactive mapping
+                  of the Bronchiectasis cohort provided insight into the distribution of NTM isolates.” <br></br> – Dr Mustafa Elsayed</p>
+              </div>
+              <p class="mb-5"><i class="fa fa-fw fa-github"></i><a href="https://github.com/burtonbiomedical/uti_data_project_2017">Github repo</a></p>
               <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                 <i class="fa fa-close"></i>
                 Close Project</a>
@@ -319,10 +521,34 @@
         <div class="container text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <h2 class="text-secondary text-uppercase mb-0">Personal Projects</h2>
               <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
-              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <p class="mb-5">Below you can find personal projects and coursework I have completed as part of my own going study of Data Science and Web Development</p>
+              <div class="row mb-5">
+                <div class="col-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item active">DataQuest: Data Science Projects</a>
+                    <a href="https://github.com/burtonbiomedical/DataQuest_Projects/blob/master/Data%20Analysis%20and%20Visualisation/%20Analyzing%20NYC%20High%20School%20Data/Is%20the%20SAT%20scoring%20system%20fair%3F.ipynb" class="list-group-item list-group-item-action">Is the SAT scoring system fair?</a>
+                    <a href="https://github.com/burtonbiomedical/DataQuest_Projects/blob/master/Data%20Analysis%20and%20Visualisation/%20Visualizing%20The%20Gender%20Gap%20In%20College%20Degrees/%20Visualizing%20The%20Gender%20Gap%20In%20College%20Degrees.ipynb" class="list-group-item list-group-item-action">Visualising the gender pay gap in college graduates</a>
+                    <a href="https://github.com/burtonbiomedical/DataQuest_Projects/blob/master/SQL%20and%20Databases/%20Preparing%20data%20for%20SQLite/Basics.ipynb" class="list-group-item list-group-item-action">Exploring Academy Award Nomination Data</a>
+                    <a href="https://github.com/burtonbiomedical/DataQuest_Projects/blob/master/Machine%20Learning/%20Creating%20a%20Kaggle%20Workflow/Creating%20a%20Kaggle%20Workflow.ipynb" class="list-group-item list-group-item-action">Creating a Kaggle Workflow</a>
+                    <a href="https://github.com/burtonbiomedical/DataQuest_Projects/blob/master/Machine%20Learning/Predicting%20Car%20Prices%20with%20K-Nearest%20Neighbours/Predicting%20Car%20Prices%20with%20K-Nearest%20Neighbours.ipynb" class="list-group-item list-group-item-action">Predicting Car Prices with K-Nearest Neighbours</a>
+                    <a href="https://github.com/burtonbiomedical/DataQuest_Projects/blob/master/Machine%20Learning/%20Predicting%20the%20price%20of%20house%20sales%20using%20the%20AMES%20dataset/Predicting%20House%20Prices.ipynb" class="list-group-item list-group-item-action">Predicting House Sale Price</a>
+                    <a href="https://github.com/burtonbiomedical/DataQuest_Projects" class="list-group-item-info list-group-item-action">Find more on GitHub <i class="fa fa-github mr-2"></i></a>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item active">FreeCodeCamp: Web applications</a>
+                    <a href="qoute_machine/quote_machine.html" class="list-group-item list-group-item-action">Marcus Aurelius Quote Generator</a>
+                    <a href="#" class="list-group-item list-group-item-action">Weather App</a>
+                    <a href="#" class="list-group-item list-group-item-action">MicrobioWiki</a>
+                    <a href="#" class="list-group-item list-group-item-action">Counting Chamber</a>
+                    <a href="#" class="list-group-item list-group-item-action">Pomodoro App</a>
+                    <a href="#" class="list-group-item list-group-item-action">Javascript Calculator</a>
+                  </div>
+                </div>
+              </div>
               <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                 <i class="fa fa-close"></i>
                 Close Project</a>
